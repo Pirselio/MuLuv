@@ -18,15 +18,19 @@
     </head>
 
 	<body>
-		<div class = "container">
-			<label for="email">Indirizzo Email</label>
-			<span class="glyphicon glyphicon-envelope"></span>
-			<input type="email" class="form-control" id="email" placeholder = "Inserisci Email">
-		<br>
-			<label for="Password">Password</label>
-			<span class="glyphicon glyphicon-lock"></span>
-			<input type="Password" class="form-control" id="password" placeholder = "Inserisci Password">
-		</div>
+		<form action="/action_page.php">
+			<div class = "container">
+				<label for="email">Indirizzo Email</label>
+				<span class="glyphicon glyphicon-envelope"></span>
+				<input type="email" class="form-control" id="email" placeholder = "Inserisci Email">
+			<br>
+				<label for="Password">Password</label>
+				<span class="glyphicon glyphicon-lock"></span>
+				<input type="Password" class="form-control" id="password" placeholder = "Inserisci Password">
+			<br>	
+				<button type="button" class="btn btn-danger btn-block">Login</button>
+			</div>
+		</form>
 	</body>
 	
 </html>
