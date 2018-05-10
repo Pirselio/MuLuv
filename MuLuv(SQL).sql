@@ -1,4 +1,4 @@
-<-- PROGETTO MuLuv Jakoelio Leka, Alessio Piro , Lorenzo Silvestroni -->
+<-- PROGETTO MuLuv Jakoelio Leka, Alessio Piro, Lorenzo Silvestroni -->
 
 TRADUZIONE A LIVELLO LOGICO
 Utenti(IDutente,Username,Email,Password,Nome,Cognome,Sesso,Foto)
