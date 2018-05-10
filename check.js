@@ -1,10 +1,11 @@
+//espressione regolare per controllo email
 //https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript
 function validateEmail(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
 }
 
-function check(){
+function registerCheck(){
 	var nome = document.getElementById("nome").value;
 	var cognome = document.getElementById("cognome").value;
 	var pwd = document.getElementById("pwd").value;
@@ -17,7 +18,18 @@ function check(){
 	
 	if(pwd != pwd2) return false; //password diverse
 	
-	if(!validateEmail(user)) return false;
+	if(!validateEmail(user)) return false; //controlla email
+	
+	return true;
+}
+
+function loginCheck(){
+	var email = document.getElementById("email").value;
+	var pwd = document.getElementById("password").value;
+	
+	if(email.length == 0 || pwd.length == 0) return false; //controllo campi non vuoti
+	
+	if(!validateEmail(email)) return false; 
 	
 	return true;
 }
