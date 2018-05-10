@@ -18,18 +18,23 @@
     </head>
 
 	<body>
-		<form class="form-inline">
-			<label for="email">Indirizzo Email</label>
-			<span class="glyphicon glyphicon-envelope"></span>
-			<input type="email" class="form-control" id="email" placeholder = "Inserisci Email">
-		</div>
-		<br>
-		<div class="col-md-12"></div>
-		<form class="form-inline">
-			<label for="Password">Password</label>
-			<span class="glyphicon glyphicon-lock"></span>
-			<input type="Password" class="form-control" id="password" placeholder = "Inserisci Password">
-		</div>
+		
+			<div class = "container">
+				<form action="Login.php" METHOD="POST">
+				<label for="email">Indirizzo Email</label>
+				<span class="glyphicon glyphicon-envelope"></span>
+				<input type="email" class="form-control" NAME=email placeholder = "Inserisci Email">
+			<br>
+				<label for="Password">Password</label>
+				<span class="glyphicon glyphicon-lock"></span>
+				<input type="Password" class="form-control" NAME=password placeholder = "Inserisci Password">
+			<br>
+				<button type="submit" class="btn btn-danger btn-block">Login</button>
+				
+			</div>
+			</form>
+			
+	
 	</body>
 	
 </html>
