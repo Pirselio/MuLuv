@@ -10,7 +10,7 @@ Autori(IDautore,Nome,Cognome,Datadinascita,Foto)
 
 CREATE TABLE Utenti(
 	IDutente int(5) not null primary key auto_increment,
-	Email varchar(30) not null,
+	User varchar(30) not null,
 	Password varchar(30) not null,
 	Nome varchar(30) not null,
 	Cognome varchar(30) not null,
