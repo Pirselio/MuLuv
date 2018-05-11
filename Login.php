@@ -30,10 +30,8 @@
       if($count == 1) 
       {
          //session_register("myusername");
-         $_SESSION['login_user'] = $myusername;
-         echo "Benvenuto!";
-         
-         //header("location: welcome.php");
+         $_SESSION['login_user'] = $myusername;         
+         header("location: IndexHome.php");
       }
       else 
       {
