@@ -8,9 +8,12 @@ Canzoni(IDcanzone,Durata,Genere,Titolo,DataProduzione)
 Fattada(Kcanzone,Kautore)
 Autori(IDautore,Nome,Cognome,Datadinascita,Foto)
 
+CREATE DATABASE MuLuv;
+use MuLuv;
+
 CREATE TABLE Utenti(
 	IDutente int(5) not null primary key auto_increment,
-	User varchar(30) not null,
+	Email varchar(30) not null,
 	Password varchar(30) not null,
 	Nome varchar(30) not null,
 	Cognome varchar(30) not null,
