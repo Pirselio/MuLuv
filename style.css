@@ -1,0 +1,33 @@
+body{
+	background-image: url("background.jpg");
+}
+.container{
+	margin-top: 150px;
+	padding: 20px;
+	background-color: rgb(223,217,217);
+	border: 2px solid #b5babb;
+	border-radius: 10px;
+	width: 400px;
+	opacity: 0.9;
+}
+.preferiti{
+	margin-top: 100px;
+	margin-left: 100px;
+	margin-right: 100px;
+	height: 600px;
+}
+.brani{
+	width: 350px;
+	padding: 20px;
+	display: inline-block;
+	text-align: center;
+	border: 2px solid #b5babb;
+	border-radius: 10px;
+	font-size: 18;
+	background-color: rgb(250,219,133);
+	opacity: 0.9;
+}
+#headpref{
+	margin-left: 50px;
+	text-shadow: 1px 1px grey;
+}
