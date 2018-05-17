@@ -39,7 +39,7 @@ CREATE TABLE Canzoni(
 	Durata varchar(30) not null,
 	Genere varchar(30) not null,
 	Titolo varchar(30) not null,
-	DataProduzione date not null
+	AnnoProduzione varchar(4)
 );
 CREATE TABLE Fattada(
 	Kcanzone int(5),
