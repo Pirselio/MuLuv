@@ -40,12 +40,13 @@
 			<div class = "container">
 				<label for="email">Indirizzo Email</label>
 				<span class="glyphicon glyphicon-envelope"></span>
-				<input type="email" class="form-control" NAME=email placeholder = "Inserisci Email" required>
+				<input type="email" class="form-control" id="email" NAME="email" placeholder = "Inserisci Email" required>
 			<br>
 				<label for="Password">Password</label>
 				<span class="glyphicon glyphicon-lock"></span>
-				<input type="Password" class="form-control" NAME=password placeholder = "Inserisci Password" required>
+				<input type="Password" class="form-control" id="password" NAME="password" placeholder = "Inserisci Password" required>
 			<br>
+			<?php if(isset($_GET['badlogin'])){ echo '<p style="color:red">Password errata</p>';}?>
 				<button type="submit" class="btn btn-danger btn-block">Login</button>
 				
 			</div>

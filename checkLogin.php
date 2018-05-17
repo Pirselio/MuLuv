@@ -19,8 +19,7 @@
 	  if (!$result) 
 	  {
 		printf("Error: %s\n", mysqli_error($db));
-		echo "Username o Password errata!";
-		exit();
+		header("location: IndexLogin.php?badlogin");
 	  }
      
       $count = mysqli_num_rows($result);
@@ -31,14 +30,14 @@
       {
          //session_register("myusername");
          $_SESSION['login_user'] = $myusername;
-         echo "Benvenuto!";
          
-         //header("location: welcome.php");
+         header("location: IndexHome.php");
       }
       else 
       {
          $error = "Your Login Name or Password is invalid";
-         echo "Username o Password errata!";
+         //echo "Username o Password errata!";
+		 header("location: IndexLogin.php?badlogin");
       }
    }
    

@@ -30,7 +30,7 @@
 				</div>
 				<!--Link ad altro, ul = unordered list, li = list-->
 				<ul class="nav navbar-nav">
-					<?php if(isset($_SESSION['login_user'])){echo "<li><a href=\"#\">Home</a></li>"; } ?>
+					<?php //if(isset($_SESSION['login_user'])){echo "<li><a href=\"#\">Home</a></li>"; } ?>
 					<li class="active"><a href="IndexRegister.php">Register</a></li>
 					<li><a href="IndexLogin.php">Login</a></li>
 				</ul>

@@ -2,7 +2,9 @@
 //https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript
 function validateEmail(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
+    var emailval = re.test(String(email).toLowerCase());
+	if(!emailval) alert("Email non valida"); //html5 non controlla con espressione regolare
+	return emailval;
 }
 
 function registerCheck(){
@@ -29,7 +31,7 @@ function loginCheck(){
 	
 	if(email.length == 0 || pwd.length == 0) return false; //controllo campi non vuoti
 	
-	if(!validateEmail(email)) return false; 
+	if(!validateEmail(email)) return false;
 	
 	return true;
 }

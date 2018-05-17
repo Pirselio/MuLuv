@@ -33,7 +33,7 @@
 		if($count == 0) 
 		{
 			//session_register("myusername");
-			$_SESSION['register_user'] = $myusername;
+			$_SESSION['login_user'] = $myusername;
 			
 			// TODO: manca l'SQL per la registrazione
 			$sql = "INSERT INTO utenti(User,Password,Nome,Cognome)
