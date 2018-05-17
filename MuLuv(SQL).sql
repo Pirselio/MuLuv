@@ -53,6 +53,6 @@ CREATE TABLE Autori(
 	Nome varchar(30) not null,
 	Cognome varchar(30) not null,
 	Datadinascita date not null,
-	Foto varchar(30) not null
+	Foto varchar(30)
 );
 
