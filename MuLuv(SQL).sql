@@ -51,7 +51,6 @@ CREATE TABLE Fattada(
 CREATE TABLE Autori(
 	IDautore int(5) not null primary key auto_increment,
 	Nome varchar(30) not null,
-	Cognome varchar(30) not null,
 	Datadinascita date not null,
 	Foto varchar(30)
 );
