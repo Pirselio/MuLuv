@@ -14,7 +14,7 @@
       $myusername = mysqli_real_escape_string($db,$_POST['email']);
       $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
       
-      $sql = "SELECT Nome FROM Utenti WHERE Email = '$myusername' and Password = '$mypassword'";
+      $sql = "SELECT Nome FROM Utenti WHERE email = '$myusername' and Password = '$mypassword'";
       $result = mysqli_query($db,$sql);
 	  if (!$result) 
 	  {

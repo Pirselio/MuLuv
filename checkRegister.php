@@ -4,7 +4,6 @@
    define('DB_USERNAME', 'root');
    define('DB_PASSWORD', '');
    define('DB_DATABASE', 'MuLuv');
-
    $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
    session_start();
   
@@ -36,7 +35,7 @@
 			$_SESSION['login_user'] = $myusername;
 			
 			// TODO: manca l'SQL per la registrazione
-			$sql = "INSERT INTO utenti(Email,Password,Nome,Cognome)
+			$sql = "INSERT INTO Utenti(Email,Password,Nome,Cognome)
 			VALUES('$myusername','$mypassword','$mynome','$mycognome')";
 			$result = mysqli_query($db,$sql);
 			

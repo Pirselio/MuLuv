@@ -45,9 +45,7 @@
 	  
 	  //Crea connection
 	  $conn = new mysqli($servername, $username, $password, $dbname);
-	  //Effettua la ricerca
-	  $query = $_GET['search'];
-	  $sql = "SELECT Titolo FROM Canzoni WHERE `Titolo` LIKE '%".$query."%'";
+	  $sql = $sql = "SELECT Nome FROM Autori";
 	  
 	  $result = $conn->query($sql);
 	  if ($result->num_rows > 0) 
@@ -58,14 +56,10 @@
 		  ?>
 			<div class="container text-center" id = "Brani">
 			  <div class="row content">
-		       <div class="col-sm-4 sidenav">
-				<div class="thumbnail">
-				  <p><strong>"<?php echo $row["Titolo"]; ?>"</strong></p>
-				  <form action="Canzone.php"> 
-				  <button class="submit" name = "song" value = "<?php echo $row["Titolo"]; ?>">Vai</button>
-				  </form>
-				  <form action = "AddPreferito.php">
-				  <button class="submit" name = "song" value = "<?php echo $row["Titolo"]; ?>">Aggiungi</button>
+		        <div class="col-sm-4 sidenav">
+				  <p><strong>"<?php echo $row["Nome"]; ?>"</strong></p>
+				  <form action="Artista.php"> 
+				  <button class="submit" name = "autore" value = "<?php echo $row["Nome"]; ?>">Vai</button>
 				  </form>
 				</div>
 			  </div>

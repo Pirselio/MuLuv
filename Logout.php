@@ -1,5 +1,5 @@
 <?php
 	session_start();
 	session_destroy();
-	header("location: IndexLogin.php");
+	header("location: IndexLogIn.php");
 ?>
