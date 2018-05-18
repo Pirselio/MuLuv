@@ -1,0 +1,119 @@
+CREATE TABLE `Autori` (
+  `IDautore` int(5) NOT NULL,
+  `Nome` varchar(30) NOT NULL,
+  `Cognome` varchar(30) NOT NULL,
+  `Datadinascita` date NOT NULL,
+  `Foto` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `Autori`
+--
+
+INSERT INTO `Autori` (`IDautore`, `Nome`, `Cognome`, `Datadinascita`, `Foto`) VALUES
+(1, 'Paco de Lucia', 'de Lucia', '2018-05-16', 'foto.jpg'),
+(2, 'Led Zeppelin', 'zeppolina', '2018-05-03', 'foto2.jpg'),
+(3, 'Miles Davis', 'Davis', '2018-05-16', 'foto3.jpg'),
+(4, 'Vicente ', 'Amigo', '2018-05-02', 'foto.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Canzoni`
+--
+
+CREATE TABLE `Canzoni` (
+  `IDcanzone` int(5) NOT NULL,
+  `Durata` varchar(30) NOT NULL,
+  `Genere` varchar(30) NOT NULL,
+  `Titolo` varchar(30) NOT NULL,
+  `DataProduzione` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `Canzoni`
+--
+
+INSERT INTO `Canzoni` (`IDcanzone`, `Durata`, `Genere`, `Titolo`, `DataProduzione`) VALUES
+(1, '8 min', 'Rock', 'Kashmir', '2017-11-02'),
+(2, '4 min', 'Flamenco', 'Tre notas para decir te quiero', '2018-05-09'),
+(3, '5 min', 'Flamenco', 'Zyriab', '2018-05-11'),
+(4, '6  min', 'Jazz', 'So wht', '0000-00-00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Fattada`
+--
+
+CREATE TABLE `Fattada` (
+  `Kcanzone` int(5) NOT NULL,
+  `Kautore` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `Fattada`
+--
+
+INSERT INTO `Fattada` (`Kcanzone`, `Kautore`) VALUES
+(1, 2),
+(2, 4),
+(3, 1),
+(4, 3);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Hatraipreferiti`
+--
+
+CREATE TABLE `Hatraipreferiti` (
+  `Kutente` int(5) NOT NULL,
+  `Kcanzone` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `Hatraipreferiti`
+--
+
+INSERT INTO `Hatraipreferiti` (`Kutente`, `Kcanzone`) VALUES
+(1, 1),
+(1, 2),
+(1, 3),
+(2, 3);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Havotato`
+--
+
+CREATE TABLE `Havotato` (
+  `Kutente` int(5) NOT NULL,
+  `Kcanzone` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Utenti`
+--
+
+CREATE TABLE `Utenti` (
+  `IDutente` int(5) NOT NULL,
+  `Username` varchar(30) NOT NULL,
+  `Email` varchar(30) NOT NULL,
+  `Password` varchar(30) NOT NULL,
+  `Nome` varchar(30) NOT NULL,
+  `Cognome` varchar(30) NOT NULL,
+  `Sesso` varchar(1) NOT NULL,
+  `Foto` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `Utenti`
+--
+
+INSERT INTO `Utenti` (`IDutente`, `Username`, `Email`, `Password`, `Nome`, `Cognome`, `Sesso`, `Foto`) VALUES
+(1, 'Piro', 'piroal@gmail.com', 'pass', 'Alessio', 'Piro', 'M', 'asasas'),
+(2, '', 'marcogiovanni@gmail.com', '1234', 'Marco', 'giovanni', '', '');
