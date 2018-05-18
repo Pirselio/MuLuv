@@ -35,7 +35,7 @@ CREATE TABLE Havotato(
 CREATE TABLE Canzoni(
 	IDcanzone int(5) not null primary key auto_increment,
 	Durata varchar(30) not null,
-	Genere varchar(30) not null,
+	Genere varchar(30) ,
 	Titolo varchar(30) not null,
 	DataProduzione date not null
 );
